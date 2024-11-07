@@ -1,0 +1,44 @@
+---
+import Base from "@/layouts/Base.astro";
+import WebDesignPage from "@/layouts/WebDesignPage.astro";
+import { getListPage } from "@/lib/contentParser.astro";
+import { supportedLang } from "@/lib/utils/languageParser";
+import type { ContentEntryMap } from "astro:content";
+
+export function getStaticPaths() {
+  const paths = supportedLang.map((lang) => ({
+    params: { lang: lang || undefined },
+  }));
+  return paths;
+}
+
+const { lang } = Astro.params;
+
+// Provide default data in case the page is not found
+const defaultData = {
+  title: "Social Ads",
+  meta_title: "Servicios de Social Ads",
+  description: "Servicios profesionales de Social Ads",
+  image: "/images/services/social-ads.jpg",
+  draft: false,
+};
+
+let pageData = defaultData;
+try {
+  const pages = await getListPage("pages/spanish/servicios/social-ads", lang as keyof ContentEntryMap);
+  if (pages[0]?.data) {
+    pageData = pages[0].data;
+  }
+} catch (error) {
+  console.error("Error loading page data:", error);
+}
+---
+
+<Base
+  title={pageData.title}
+  meta_title={pageData.meta_title}
+  description={pageData.description}
+  image={pageData.image}
+>
+  <WebDesignPage frontmatter={pageData} />
+</Base>

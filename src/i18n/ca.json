@@ -1,0 +1,16 @@
+{
+  "full_name": "Nom Complet",
+  "full_name_placeholder": "Introdueix el teu nom complet",
+  "mail_placeholder": "john.doe@email.com",
+  "message": "Alguna cosa més?",
+  "message_placeholder": "El teu missatge aquí...",
+  "submit": "Enviar",
+  "read_more": "Llegir Més",
+  "page_not_found": "Pàgina No Trobada",
+  "working_mail": "Email de Treball",
+  "anything_else": "Alguna cosa més?",
+  "contact_message_placeholder": "El teu missatge aquí...",
+  "page_not_found_content": "La pàgina que estàs cercant pot haver estat eliminada, reanomenada o no està disponible temporalment.",
+  "back_to_home": "Tornar a l'Inici",
+  "get_started": "Començar"
+}

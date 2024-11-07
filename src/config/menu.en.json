@@ -1,0 +1,23 @@
+{
+  "main": [
+    { "name": "Home", "url": "/" },
+    {
+      "name": "Services",
+      "url": "",
+      "hasChildren": true,
+      "children": [
+        { "name": "Google Ads", "url": "/services/google-ads" },
+        { "name": "Social Ads", "url": "/services/social-ads" },
+        { "name": "Social Media", "url": "/services/social-media" },
+        { "name": "Analytics", "url": "/services/analytics" },
+        { "name": "Web Design", "url": "/web-design" }
+      ]
+    },
+    { "name": "Blog", "url": "/blog" },
+    { "name": "Contact", "url": "/contact" }
+  ],
+  "footer": [
+    { "name": "Elements", "url": "/elements" },
+    { "name": "Privacy Policy", "url": "/privacy-policy" }
+  ]
+}

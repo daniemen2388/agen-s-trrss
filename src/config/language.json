@@ -1,0 +1,14 @@
+[
+  {
+    "languageName": "ES",
+    "languageCode": "es",
+    "contentDir": "spanish",
+    "weight": 1
+  },
+  {
+    "languageName": "CA",
+    "languageCode": "ca",
+    "contentDir": "catalan",
+    "weight": 2
+  }
+]

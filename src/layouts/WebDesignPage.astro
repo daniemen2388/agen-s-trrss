@@ -1,0 +1,244 @@
+---
+import ImageMod from "@/components/ImageMod.astro";
+import { markdownify } from "@/lib/utils/textConverter";
+
+const { frontmatter } = Astro.props;
+
+// Provide default values for all required properties
+const {
+  banner = {
+    title: "",
+    content: "",
+    image: "",
+    button: { enable: false, label: "", link: "" }
+  },
+  process = {
+    title: "",
+    description: "",
+    steps: []
+  },
+  services = {
+    title: "",
+    notice: { type: "", content: "" },
+    services_list: []
+  },
+  why_choose_us = {
+    title: "",
+    accordions: []
+  },
+  portfolio = {
+    title: "",
+    projects: []
+  },
+  cta = {
+    title: "",
+    buttons: []
+  },
+  additional_services = {
+    title: "",
+    services_list: [],
+    notice: { type: "", content: "" }
+  }
+} = frontmatter || {};
+---
+
+<!-- Banner Section -->
+<section class="section pt-14">
+  <div class="container">
+    <div class="row justify-center">
+      <div class="lg:col-7 md:col-9 mb-8 text-center">
+        <h1 set:html={markdownify(banner.title)} class="mb-4 text-h3 lg:text-h1" />
+        <p set:html={markdownify(banner.content)} class="mb-8" />
+        {
+          banner.button?.enable && (
+            <a class="btn btn-primary" href={banner.button.link}>
+              {banner.button.label}
+            </a>
+          )
+        }
+      </div>
+      {
+        banner.image && (
+          <div class="col-12">
+            <ImageMod
+              src={banner.image}
+              height={380}
+              width={1200}
+              alt="banner"
+              format="webp"
+            />
+          </div>
+        )
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Process Section -->
+<section class="section-sm">
+  <div class="container">
+    <div class="row justify-center">
+      <div class="text-center lg:col-8">
+        <h2 set:html={markdownify(process.title)} class="mb-4" />
+        <p set:html={markdownify(process.description)} class="mb-8" />
+      </div>
+    </div>
+    <div class="row mt-8">
+      {process.steps?.map((step: any) => (
+        <div class="md:col-4 mb-6">
+          <div class="bg-theme-light dark:bg-darkmode-theme-light p-8 rounded-lg h-full">
+            <h3 class="h4 mb-4">{step.name}</h3>
+            <div class="content" set:html={markdownify(step.content)} />
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section class="section bg-gradient">
+  <div class="container">
+    <div class="row justify-center">
+      <div class="text-center lg:col-8">
+        <h2 set:html={markdownify(services.title)} class="mb-4" />
+        {services.notice && (
+          <div class={`notice ${services.notice.type} mb-8`}>
+            <div class="notice-body">
+              {services.notice.content}
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+    <div class="row mt-8">
+      {services.services_list?.map((service: any) => (
+        <div class="md:col-4 mb-6">
+          <div class="bg-white dark:bg-darkmode-body p-8 rounded-lg h-full shadow-md">
+            <h3 class="h4 mb-4">{service.title}</h3>
+            <ul class="list-disc pl-4">
+              {service.features?.map((feature: string) => (
+                <li class="mb-2">{feature}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us Section -->
+<section class="section">
+  <div class="container">
+    <div class="row justify-center">
+      <div class="text-center lg:col-8">
+        <h2 set:html={markdownify(why_choose_us.title)} class="mb-8" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="lg:col-12">
+        {why_choose_us.accordions?.map((accordion: any) => (
+          <div class="accordion mb-4">
+            <div class="accordion-header">
+              {accordion.title}
+            </div>
+            <div class="accordion-content">
+              <ul class="list-disc pl-4">
+                {accordion.items?.map((item: string) => (
+                  <li class="mb-2">{item}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio Section -->
+{portfolio.projects && portfolio.projects.length > 0 && (
+  <section class="section bg-gradient">
+    <div class="container">
+      <div class="row justify-center">
+        <div class="text-center lg:col-8">
+          <h2 set:html={markdownify(portfolio.title)} class="mb-8" />
+        </div>
+      </div>
+      <div class="row">
+        {portfolio.projects.map((project: any) => (
+          <div class="md:col-6 mb-8">
+            <a href={project.link} class="block">
+              <ImageMod
+                src={project.src}
+                height={project.height}
+                width={project.width}
+                alt={project.alt}
+                class="rounded-lg shadow-lg"
+                format="webp"
+              />
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+)}
+
+<!-- CTA Section -->
+<section class="section">
+  <div class="container">
+    <div class="row justify-center">
+      <div class="text-center lg:col-8">
+        <h2 set:html={markdownify(cta.title)} class="mb-8" />
+        <div class="flex justify-center gap-4">
+          {cta.buttons?.map((button: any) => (
+            <a
+              class={`btn ${button.style === "solid" ? "btn-primary" : "btn-outline-primary"}`}
+              href={button.link}
+            >
+              {button.label}
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Additional Services Section -->
+<section class="section bg-gradient">
+  <div class="container">
+    <div class="row justify-center">
+      <div class="text-center lg:col-8">
+        <h2 set:html={markdownify(additional_services.title)} class="mb-8" />
+        <ul class="list-none">
+          {additional_services.services_list?.map((service: string) => (
+            <li class="mb-4 text-lg">{service}</li>
+          ))}
+        </ul>
+        {additional_services.notice && (
+          <div class={`notice ${additional_services.notice.type} mt-8`}>
+            <div class="notice-body">
+              {additional_services.notice.content}
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+// Accordion functionality
+document.addEventListener('astro:page-load', () => {
+  const accordions = document.querySelectorAll('.accordion-header');
+  accordions.forEach(accordion => {
+    accordion.addEventListener('click', () => {
+      const parent = accordion.parentElement;
+      parent?.classList.toggle('active');
+    });
+  });
+});
+</script>

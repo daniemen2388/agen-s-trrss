@@ -1,0 +1,16 @@
+{
+  "full_name": "Nombre Completo",
+  "full_name_placeholder": "Introduce tu nombre completo",
+  "mail_placeholder": "john.doe@email.com",
+  "message": "¿Algo más?",
+  "message_placeholder": "Tu mensaje aquí...",
+  "submit": "Enviar",
+  "read_more": "Leer Más",
+  "page_not_found": "Página No Encontrada",
+  "working_mail": "Email de Trabajo",
+  "anything_else": "¿Algo más?",
+  "contact_message_placeholder": "Tu mensaje aquí...",
+  "page_not_found_content": "La página que estás buscando puede haber sido eliminada, renombrada o no está disponible temporalmente.",
+  "back_to_home": "Volver al Inicio",
+  "get_started": "Empezar"
+}

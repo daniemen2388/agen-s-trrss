@@ -1,0 +1,23 @@
+{
+  "main": [
+    { "name": "Inici", "url": "/" },
+    {
+      "name": "Serveis",
+      "url": "",
+      "hasChildren": true,
+      "children": [
+        { "name": "Google Ads", "url": "/serveis/google-ads" },
+        { "name": "Social Ads", "url": "/serveis/social-ads" },
+        { "name": "Xarxes Socials", "url": "/serveis/xarxes-socials" },
+        { "name": "Analítica", "url": "/serveis/analitica" },
+        { "name": "Disseny Web", "url": "/web-design" }
+      ]
+    },
+    { "name": "Blog", "url": "/blog" },
+    { "name": "Contacte", "url": "/contact" }
+  ],
+  "footer": [
+    { "name": "Elements", "url": "/elements" },
+    { "name": "Política de Privacitat", "url": "/privacy-policy" }
+  ]
+}
