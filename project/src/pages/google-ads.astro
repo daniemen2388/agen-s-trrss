@@ -1,0 +1,152 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+import Icon from '../components/Icon.astro';
+import FAQ from '../components/FAQ.astro';
+import CallToAction from '../components/CallToAction.astro';
+
+const metaTitle = "Agencia Google Ads Terrassa 【Publicidad en Google】▷ Expertos en SEM";
+const metaDescription = "Agencia Google Ads en Terrassa especializada en campañas de publicidad en Google. Maximiza tu ROI y consigue más clientes con nuestra estrategia personalizada.";
+
+const faqs = [
+  {
+    question: "¿Cuánto cuesta una campaña de Google Ads?",
+    answer: "El presupuesto depende de tus objetivos y del mercado al que quieres llegar. Sin embargo, siempre optimizamos la inversión para que pagues solo por resultados. Hacemos que cada euro cuente."
+  },
+  {
+    question: "¿Por qué no debería hacer Google Ads por mi cuenta?",
+    answer: "La publicidad en Google es fácil de iniciar, pero muy difícil de optimizar sin experiencia. Un error puede hacer que pagues de más o que tus anuncios no lleguen a quienes de verdad los necesitan. Nosotros te evitamos ese desgaste, optimizando al máximo cada clic."
+  },
+  {
+    question: "¿Cuánto tiempo se tarda en ver resultados?",
+    answer: "Con Google Ads, los resultados pueden ser rápidos. Pero el verdadero rendimiento se ve cuando ajustamos y optimizamos tus campañas en las primeras semanas. Así, las mejoras no solo llegan, sino que se mantienen en el tiempo."
+  },
+  {
+    question: "¿Puedo hacer campañas solo para mi área local en Terrassa?",
+    answer: "Por supuesto. Google Ads permite segmentar a nivel local, y diseñamos tus campañas para que aparezcas justo frente a los clientes de tu zona, cuando ellos están listos para comprar."
+  }
+];
+---
+
+<Layout 
+  title="Google Ads Terrassa | Publicidad en Google"
+  metaTitle={metaTitle}
+  metaDescription={metaDescription}
+>
+  <main>
+    <section class="py-20">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h1 class="font-signika font-extrabold text-5xl text-heading dark:text-dark-heading mb-6">
+              Agencia Google Ads Terrassa: Haz que tus anuncios den en el blanco… ¡y que no fallen!
+            </h1>
+            <p class="text-text dark:text-dark-text mb-8">
+              Si estás aquí, seguramente tienes una idea clara: quieres que tus anuncios lleguen a quien de verdad importa. Y no solo eso, quieres que den resultados. <em>Quien no esté dispuesto a generar clics y ventas mejor que ni entre, ¿verdad?</em>
+            </p>
+            <Button href="/contacto" variant="primary">
+              Empieza tu campaña de Google Ads
+            </Button>
+          </div>
+          <div>
+            <img 
+              src="/images/google-ads-specialist.svg" 
+              alt="Especialista en Google Ads"
+              class="w-full max-w-lg mx-auto"
+              width="512"
+              height="512"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-background-alt dark:bg-dark-background-alt">
+      <div class="container mx-auto px-4">
+        <h2 class="font-signika font-bold text-4xl text-heading dark:text-dark-heading text-center mb-12">
+          ¿Por qué necesitas una Agencia Google Ads?
+        </h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="text-center">
+            <Icon name="target" className="w-16 h-16 mx-auto mb-4" />
+            <h3 class="font-signika font-semibold text-2xl text-heading dark:text-dark-heading mb-4">Optimización de inversión</h3>
+            <p class="text-text dark:text-dark-text">Te ayudamos a gastar menos y ganar más. Porque poner un anuncio está bien, pero optimizar cada euro para maximizar resultados es otra cosa.</p>
+          </div>
+          <div class="text-center">
+            <Icon name="visibility" className="w-16 h-16 mx-auto mb-4" />
+            <h3 class="font-signika font-semibold text-2xl text-heading dark:text-dark-heading mb-4">Atraemos al cliente ideal</h3>
+            <p class="text-text dark:text-dark-text">Con Google Ads bien ejecutados, el cliente encuentra justo lo que necesita, en el momento en que lo está buscando. Sin rodeos, directo a la venta.</p>
+          </div>
+          <div class="text-center">
+            <Icon name="chart" className="w-16 h-16 mx-auto mb-4" />
+            <h3 class="font-signika font-semibold text-2xl text-heading dark:text-dark-heading mb-4">Ahorro de tiempo</h3>
+            <p class="text-text dark:text-dark-text">Hay miles de factores en una campaña que pueden hacer que se dispare tu presupuesto. Nosotros nos ocupamos de todo para que solo te ocupes de recoger los frutos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-white dark:bg-dark-background">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto bg-[#F6F6F6] dark:bg-[#000] rounded-lg shadow-xl p-12">
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 class="font-signika font-bold text-4xl text-heading dark:text-dark-heading mb-6">
+                ¿Listo para potenciar tu negocio con Google Ads?
+              </h2>
+              <p class="text-text dark:text-dark-text mb-8">
+                Descubre cómo podemos ayudarte a alcanzar a tu audiencia ideal y maximizar tu retorno de inversión con campañas de Google Ads optimizadas.
+              </p>
+              <Button href="/contacto" variant="primary">
+                Solicita tu consulta gratuita
+              </Button>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-white dark:bg-dark-background-alt p-4 rounded-lg">
+                <img 
+                  src="/images/ads-icon.svg" 
+                  alt="Google Ads"
+                  class="w-12 h-12 mx-auto mb-2"
+                />
+              </div>
+              <div class="bg-white dark:bg-dark-background-alt p-4 rounded-lg">
+                <img 
+                  src="/images/target-icon.svg" 
+                  alt="Segmentación"
+                  class="w-12 h-12 mx-auto mb-2"
+                />
+              </div>
+              <div class="bg-white dark:bg-dark-background-alt p-4 rounded-lg">
+                <img 
+                  src="/images/roi-icon.svg" 
+                  alt="ROI"
+                  class="w-12 h-12 mx-auto mb-2"
+                />
+              </div>
+              <div class="bg-white dark:bg-dark-background-alt p-4 rounded-lg">
+                <img 
+                  src="/images/growth-icon.svg" 
+                  alt="Crecimiento"
+                  class="w-12 h-12 mx-auto mb-2"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20">
+      <div class="container mx-auto px-4">
+        <h2 class="font-signika font-bold text-4xl text-heading dark:text-dark-heading text-center mb-12">
+          Preguntas Frecuentes sobre Google Ads
+        </h2>
+        <div class="max-w-3xl mx-auto">
+          <FAQ items={faqs} />
+        </div>
+      </div>
+    </section>
+
+    <CallToAction text="Haz clic aquí para empezar a atraer clientes ahora" />
+  </main>
+</Layout>

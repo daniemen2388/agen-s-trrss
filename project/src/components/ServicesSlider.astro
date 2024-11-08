@@ -1,0 +1,114 @@
+---
+import ServiceCard from './ServiceCard.astro';
+
+const services = [
+  {
+    title: "Análisis Inicial",
+    items: ["Keyword Research", "Arquitectura", "Auditoría técnica", "Estrategia", "Consultoría"]
+  },
+  {
+    title: "SEO On Page",
+    items: ["Optimización", "Interlinking", "Indexación", "Contenidos", "Core Web Vitals"]
+  },
+  {
+    title: "SEO Off Page",
+    items: ["Auditoría Backlinks", "Link Building", "Link Baiting", "Reputación Online", "Estrategia Off Page"]
+  },
+  {
+    title: "Especialización",
+    items: ["Migraciones", "SEO internacional", "SEO Local", "SEO Ecommerce", "SEO para B2B"]
+  },
+  {
+    title: "CMS",
+    items: ["WordPress", "Prestashop", "Shopify", "Magento", "A medida"]
+  }
+];
+---
+
+<div class="services-slider relative">
+  <!-- Swiper container -->
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      {services.map(service => (
+        <div class="swiper-slide">
+          <ServiceCard title={service.title} items={service.items} />
+        </div>
+      ))}
+    </div>
+    <!-- Pagination dots -->
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+
+<script>
+  import Swiper from 'swiper';
+  import { Pagination, Autoplay } from 'swiper/modules';
+  import 'swiper/css';
+  import 'swiper/css/pagination';
+
+  // Initialize Swiper
+  const swiper = new Swiper('.swiper', {
+    modules: [Pagination, Autoplay],
+    slidesPerView: 1,
+    spaceBetween: 32,
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  });
+</script>
+
+<style>
+  .swiper {
+    padding: 20px 0 50px;
+    overflow: visible;
+  }
+  
+  .swiper-slide {
+    height: auto;
+  }
+
+  :global(.swiper-pagination) {
+    bottom: 0 !important;
+  }
+
+  :global(.swiper-pagination-bullet) {
+    width: 12px;
+    height: 12px;
+    background: #D1D5DB;
+    opacity: 1;
+    transition: all 0.3s ease;
+  }
+
+  :global(.dark .swiper-pagination-bullet) {
+    background: #4B5563;
+  }
+
+  :global(.swiper-pagination-bullet-active) {
+    background: #121212;
+    transform: scale(1.2);
+  }
+
+  :global(.dark .swiper-pagination-bullet-active) {
+    background: #FFFFFF;
+  }
+  
+  @media (max-width: 640px) {
+    .swiper {
+      padding-bottom: 40px;
+    }
+  }
+</style>

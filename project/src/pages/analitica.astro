@@ -1,0 +1,152 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+import Icon from '../components/Icon.astro';
+import FAQ from '../components/FAQ.astro';
+import CallToAction from '../components/CallToAction.astro';
+
+const metaTitle = "Analítica Web Terrassa 【Análisis de Datos】▷ Decisiones basadas en datos";
+const metaDescription = "Servicio de analítica web en Terrassa. Convierte tus datos en decisiones que generan ventas. Análisis profesional y reportes claros.";
+
+const faqs = [
+  {
+    question: "¿Qué herramientas utilizan para la analítica web?",
+    answer: "Trabajamos con herramientas como Google Analytics, Google Tag Manager, Hotjar y más, según las necesidades de tu negocio. Usamos las mejores plataformas para obtener datos precisos y valiosos."
+  },
+  {
+    question: "¿Qué incluye el servicio de analítica web?",
+    answer: "Incluye auditoría inicial, configuración de herramientas, análisis de comportamiento de usuarios, informes personalizados y recomendaciones para mejorar el rendimiento de tu web."
+  },
+  {
+    question: "¿Cada cuánto recibo un informe?",
+    answer: "Ofrecemos informes mensuales o quincenales, según prefieras. Además, tendrás acceso a un dashboard en tiempo real para consultar los datos cuando quieras."
+  },
+  {
+    question: "¿Por qué debería contratar a una agencia para la analítica web?",
+    answer: "La analítica web bien hecha no es solo mirar números. Se trata de entender el comportamiento de los usuarios y de saber cómo optimizar cada aspecto de tu sitio para generar más ingresos. Nosotros tenemos la experiencia para que saques el máximo provecho de tus datos."
+  }
+];
+---
+
+<Layout 
+  title="Analítica Web Terrassa | Análisis de Datos"
+  metaTitle={metaTitle}
+  metaDescription={metaDescription}
+>
+  <main>
+    <section class="py-20">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h1 class="font-signika font-extrabold text-5xl text-heading dark:text-dark-heading mb-6">
+              Servicio de Analítica Web en Terrassa: Convierte tus datos en decisiones que generan ventas
+            </h1>
+            <p class="text-text dark:text-dark-text mb-8">
+              ¿Tienes una web y te preguntas qué está funcionando y qué no? ¿Quieres saber de dónde vienen tus visitas, qué les interesa, y por qué algunos clientes abandonan antes de comprar? Pues no te preocupes, nosotros nos encargamos de que no tengas que adivinar.
+            </p>
+            <Button href="/contacto" variant="primary">
+              Empieza a tomar decisiones basadas en datos
+            </Button>
+          </div>
+          <div>
+            <img 
+              src="/images/analytics-specialist.svg" 
+              alt="Especialista en Analítica Web"
+              class="w-full max-w-lg mx-auto"
+              width="512"
+              height="512"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-background-alt dark:bg-dark-background-alt">
+      <div class="container mx-auto px-4">
+        <h2 class="font-signika font-bold text-4xl text-heading dark:text-dark-heading text-center mb-12">
+          ¿Por qué necesitas un servicio de Analítica Web?
+        </h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="text-center">
+            <Icon name="visibility" className="w-16 h-16 mx-auto mb-4" />
+            <h3 class="font-signika font-semibold text-2xl text-heading dark:text-dark-heading mb-4">Entender a tus clientes</h3>
+            <p class="text-text dark:text-dark-text">¿Sabes qué páginas visitan? ¿Cuánto tiempo pasan en ellas? ¿Por qué se van? Toda esa información está ahí, y nosotros la traducimos para que conozcas el comportamiento de tus usuarios.</p>
+          </div>
+          <div class="text-center">
+            <Icon name="target" className="w-16 h-16 mx-auto mb-4" />
+            <h3 class="font-signika font-semibold text-2xl text-heading dark:text-dark-heading mb-4">Optimizar conversiones</h3>
+            <p class="text-text dark:text-dark-text">No se trata solo de saber qué está pasando en tu web, sino de usar esa información para mejorar. Te ayudamos a detectar puntos de mejora y a implementar cambios que aumenten ventas.</p>
+          </div>
+          <div class="text-center">
+            <Icon name="chart" className="w-16 h-16 mx-auto mb-4" />
+            <h3 class="font-signika font-semibold text-2xl text-heading dark:text-dark-heading mb-4">Medir resultados y ROI</h3>
+            <p class="text-text dark:text-dark-text">¿Tienes campañas en Google Ads, redes sociales o email marketing? Con la analítica web podemos medir el impacto de cada campaña y decirte exactamente de dónde vienen los resultados.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-white dark:bg-dark-background">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto bg-[#F6F6F6] dark:bg-[#000] rounded-lg shadow-xl p-12">
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 class="font-signika font-bold text-4xl text-heading dark:text-dark-heading mb-6">
+                ¿Listo para tomar decisiones basadas en datos?
+              </h2>
+              <p class="text-text dark:text-dark-text mb-8">
+                Descubre cómo podemos ayudarte a entender mejor tu negocio online y tomar decisiones informadas que impulsen tu crecimiento.
+              </p>
+              <Button href="/contacto" variant="primary">
+                Solicita tu consulta gratuita
+              </Button>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-white dark:bg-dark-background-alt p-4 rounded-lg">
+                <img 
+                  src="/images/analytics-icon.svg" 
+                  alt="Analytics"
+                  class="w-12 h-12 mx-auto mb-2"
+                />
+              </div>
+              <div class="bg-white dark:bg-dark-background-alt p-4 rounded-lg">
+                <img 
+                  src="/images/dashboard-icon.svg" 
+                  alt="Dashboard"
+                  class="w-12 h-12 mx-auto mb-2"
+                />
+              </div>
+              <div class="bg-white dark:bg-dark-background-alt p-4 rounded-lg">
+                <img 
+                  src="/images/report-icon.svg" 
+                  alt="Reportes"
+                  class="w-12 h-12 mx-auto mb-2"
+                />
+              </div>
+              <div class="bg-white dark:bg-dark-background-alt p-4 rounded-lg">
+                <img 
+                  src="/images/growth-icon.svg" 
+                  alt="Crecimiento"
+                  class="w-12 h-12 mx-auto mb-2"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20">
+      <div class="container mx-auto px-4">
+        <h2 class="font-signika font-bold text-4xl text-heading dark:text-dark-heading text-center mb-12">
+          Preguntas Frecuentes sobre Analítica Web
+        </h2>
+        <div class="max-w-3xl mx-auto">
+          <FAQ items={faqs} />
+        </div>
+      </div>
+    </section>
+
+    <CallToAction text="Haz clic aquí para empezar a tomar decisiones basadas en datos" />
+  </main>
+</Layout>

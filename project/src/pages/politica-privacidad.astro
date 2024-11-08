@@ -1,0 +1,135 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const metaTitle = "Política de Privacidad | SEO Terrassa";
+const metaDescription = "Política de privacidad de SEO Terrassa. Información sobre cómo recopilamos, usamos y protegemos tus datos personales.";
+---
+
+<Layout
+  title="Política de Privacidad | SEO Terrassa"
+  metaTitle={metaTitle}
+  metaDescription={metaDescription}
+>
+  <main class="py-20">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto">
+        <h1 class="font-signika font-extrabold text-4xl text-heading dark:text-dark-heading mb-8">
+          Política de Privacidad
+        </h1>
+
+        <div class="prose dark:prose-invert max-w-none">
+          <section class="mb-8">
+            <h2 class="font-signika font-semibold text-2xl text-heading dark:text-dark-heading mb-4">
+              1. Responsable del Tratamiento
+            </h2>
+            <p class="text-text dark:text-dark-text mb-4">
+              <strong>Identidad:</strong> SEO Terrassa<br>
+              <strong>NIF:</strong> B12345678<br>
+              <strong>Dirección:</strong> Carrer de la Font Vella, 78, 08221 Terrassa, Barcelona<br>
+              <strong>Email:</strong> info@seoterrassa.com<br>
+              <strong>Teléfono:</strong> 937 88 88 88
+            </p>
+          </section>
+
+          <section class="mb-8">
+            <h2 class="font-signika font-semibold text-2xl text-heading dark:text-dark-heading mb-4">
+              2. Finalidad del Tratamiento
+            </h2>
+            <p class="text-text dark:text-dark-text mb-4">
+              En SEO Terrassa tratamos la información que nos facilitan las personas interesadas con los siguientes fines:
+            </p>
+            <ul class="list-disc pl-6 mb-4 text-text dark:text-dark-text">
+              <li>Gestionar los servicios solicitados</li>
+              <li>Enviar comunicaciones comerciales sobre nuestros productos y servicios</li>
+              <li>Responder a consultas y solicitudes de información</li>
+              <li>Mejorar nuestros servicios y la experiencia del usuario</li>
+            </ul>
+          </section>
+
+          <section class="mb-8">
+            <h2 class="font-signika font-semibold text-2xl text-heading dark:text-dark-heading mb-4">
+              3. Legitimación
+            </h2>
+            <p class="text-text dark:text-dark-text mb-4">
+              El tratamiento de sus datos está basado en:
+            </p>
+            <ul class="list-disc pl-6 mb-4 text-text dark:text-dark-text">
+              <li>La ejecución de un contrato o prestación de servicios</li>
+              <li>El consentimiento del interesado</li>
+              <li>El interés legítimo del responsable</li>
+            </ul>
+          </section>
+
+          <section class="mb-8">
+            <h2 class="font-signika font-semibold text-2xl text-heading dark:text-dark-heading mb-4">
+              4. Conservación de los Datos
+            </h2>
+            <p class="text-text dark:text-dark-text mb-4">
+              Los datos personales proporcionados se conservarán:
+            </p>
+            <ul class="list-disc pl-6 mb-4 text-text dark:text-dark-text">
+              <li>Mientras se mantenga la relación comercial</li>
+              <li>Hasta que solicite la supresión de sus datos</li>
+              <li>Durante el tiempo necesario para cumplir con las obligaciones legales</li>
+            </ul>
+          </section>
+
+          <section class="mb-8">
+            <h2 class="font-signika font-semibold text-2xl text-heading dark:text-dark-heading mb-4">
+              5. Destinatarios
+            </h2>
+            <p class="text-text dark:text-dark-text mb-4">
+              Sus datos no se cederán a terceros salvo obligación legal o en los casos en que sea necesario para la prestación del servicio, habiendo informado previamente al usuario.
+            </p>
+          </section>
+
+          <section class="mb-8">
+            <h2 class="font-signika font-semibold text-2xl text-heading dark:text-dark-heading mb-4">
+              6. Derechos
+            </h2>
+            <p class="text-text dark:text-dark-text mb-4">
+              Las personas interesadas tienen derecho a:
+            </p>
+            <ul class="list-disc pl-6 mb-4 text-text dark:text-dark-text">
+              <li>Acceder a sus datos personales</li>
+              <li>Rectificar los datos inexactos</li>
+              <li>Solicitar su supresión</li>
+              <li>Oponerse al tratamiento</li>
+              <li>Solicitar la limitación del tratamiento</li>
+              <li>Solicitar la portabilidad de los datos</li>
+            </ul>
+            <p class="text-text dark:text-dark-text mb-4">
+              Los interesados pueden ejercer sus derechos enviando un correo electrónico a info@seoterrassa.com, adjuntando copia de su DNI.
+            </p>
+          </section>
+
+          <section class="mb-8">
+            <h2 class="font-signika font-semibold text-2xl text-heading dark:text-dark-heading mb-4">
+              7. Medidas de Seguridad
+            </h2>
+            <p class="text-text dark:text-dark-text mb-4">
+              SEO Terrassa ha adoptado todas las medidas técnicas y organizativas necesarias para garantizar la seguridad de los datos de carácter personal y evitar su alteración, pérdida, tratamiento o acceso no autorizado.
+            </p>
+          </section>
+
+          <section class="mb-8">
+            <h2 class="font-signika font-semibold text-2xl text-heading dark:text-dark-heading mb-4">
+              8. Modificaciones
+            </h2>
+            <p class="text-text dark:text-dark-text">
+              SEO Terrassa se reserva el derecho de modificar la presente política de privacidad para adaptarla a novedades legislativas o jurisprudenciales, así como a prácticas de la industria. En dichos supuestos, anunciaremos en esta página los cambios introducidos con razonable antelación a su puesta en práctica.
+            </p>
+          </section>
+        </div>
+
+        <div class="mt-12 text-sm text-text dark:text-dark-text">
+          <p>Última actualización: {new Date().toLocaleDateString('es-ES', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+          })}</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>

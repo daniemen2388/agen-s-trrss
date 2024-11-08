@@ -1,0 +1,20 @@
+---
+interface Props {
+  title: string;
+  items: string[];
+}
+
+const { title, items } = Astro.props;
+---
+
+<div class="bg-[#F6F6F6] dark:bg-dark-background-alt p-6 rounded-lg shadow-lg">
+  <h3 class="font-signika font-semibold text-[33px] text-heading dark:text-dark-heading mb-4">{title}</h3>
+  <ul class="space-y-2">
+    {items.map(item => (
+      <li class="flex items-center">
+        <span class="w-2 h-2 bg-primary dark:bg-dark-primary rounded-full mr-2"></span>
+        <span class="text-text dark:text-dark-text">{item}</span>
+      </li>
+    ))}
+  </ul>
+</div>

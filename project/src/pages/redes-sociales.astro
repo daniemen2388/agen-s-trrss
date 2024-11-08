@@ -1,0 +1,152 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+import Icon from '../components/Icon.astro';
+import FAQ from '../components/FAQ.astro';
+import CallToAction from '../components/CallToAction.astro';
+
+const metaTitle = "Agencia de Redes Sociales Terrassa 【Community Manager】▷ Gestión de RRSS";
+const metaDescription = "Agencia de gestión de redes sociales en Terrassa. Gestionamos tus redes sociales para aumentar tu visibilidad y conseguir más clientes.";
+
+const faqs = [
+  {
+    question: "¿En qué redes sociales trabajan?",
+    answer: "Trabajamos con Facebook, Instagram, LinkedIn, TikTok y otras plataformas relevantes para tu negocio. Adaptamos cada estrategia para que esté alineada con el tipo de clientes que buscas."
+  },
+  {
+    question: "¿Qué incluye el servicio de gestión de redes sociales?",
+    answer: "Nos encargamos de la estrategia, creación de contenido, programación de publicaciones, monitoreo de comentarios, y análisis de resultados. Todo para que tu marca esté siempre activa y al día en redes."
+  },
+  {
+    question: "¿Cuánto tiempo lleva ver resultados en redes sociales?",
+    answer: "La construcción de una comunidad y de una marca sólida en redes sociales lleva tiempo, pero empezamos a ver interacción y crecimiento desde el primer mes. La clave está en la constancia y en el contenido de calidad."
+  },
+  {
+    question: "¿Por qué debería contratar una agencia en lugar de hacerlo yo mismo?",
+    answer: "Gestionar redes sociales profesionalmente requiere tiempo, conocimientos y una estrategia clara. Nosotros te ahorramos el esfuerzo y nos ocupamos de que tu marca crezca sin que tengas que preocuparte por cada detalle."
+  }
+];
+---
+
+<Layout 
+  title="Gestión de Redes Sociales Terrassa | Marketing en Redes Sociales"
+  metaTitle={metaTitle}
+  metaDescription={metaDescription}
+>
+  <main>
+    <section class="py-20">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h1 class="font-signika font-extrabold text-5xl text-heading dark:text-dark-heading mb-6">
+              Agencia de Redes Sociales Terrassa: Que tu marca sea la estrella del feed
+            </h1>
+            <p class="text-text dark:text-dark-text mb-8">
+              Las redes sociales no son solo para compartir fotos de vacaciones o los platos de comida. Son una herramienta poderosa para conectar, construir confianza y atraer clientes de verdad. Si estás aquí, es porque quieres algo más que simples "likes". Quieres que tu negocio se mueva y que tus redes hablen el idioma de tus clientes.
+            </p>
+            <Button href="/contacto" variant="primary">
+              Empieza a brillar en redes sociales
+            </Button>
+          </div>
+          <div>
+            <img 
+              src="/images/social-media-manager.svg" 
+              alt="Community Manager"
+              class="w-full max-w-lg mx-auto"
+              width="512"
+              height="512"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-background-alt dark:bg-dark-background-alt">
+      <div class="container mx-auto px-4">
+        <h2 class="font-signika font-bold text-4xl text-heading dark:text-dark-heading text-center mb-12">
+          ¿Por qué necesitas una Agencia de Redes Sociales?
+        </h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="text-center">
+            <Icon name="visibility" className="w-16 h-16 mx-auto mb-4" />
+            <h3 class="font-signika font-semibold text-2xl text-heading dark:text-dark-heading mb-4">Presencia efectiva</h3>
+            <p class="text-text dark:text-dark-text">Tus clientes están en redes sociales. No en cualquier sitio, sino justo en su feed. Nosotros te llevamos ahí, para que cada publicación sea una oportunidad de venta.</p>
+          </div>
+          <div class="text-center">
+            <Icon name="target" className="w-16 h-16 mx-auto mb-4" />
+            <h3 class="font-signika font-semibold text-2xl text-heading dark:text-dark-heading mb-4">Conexión real</h3>
+            <p class="text-text dark:text-dark-text">No se trata solo de vender, sino de conectar, de ser la marca a la que acuden porque confían en ti. Con la estrategia correcta, convertimos cada interacción en una relación.</p>
+          </div>
+          <div class="text-center">
+            <Icon name="chart" className="w-16 h-16 mx-auto mb-4" />
+            <h3 class="font-signika font-semibold text-2xl text-heading dark:text-dark-heading mb-4">Resultados medibles</h3>
+            <p class="text-text dark:text-dark-text">Las redes sociales consumen tiempo y esfuerzo, y es fácil desperdiciar horas sin un rumbo claro. Nosotros hacemos que cada publicación cuente y genere resultados.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-white dark:bg-dark-background">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto bg-[#F6F6F6] dark:bg-[#000] rounded-lg shadow-xl p-12">
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 class="font-signika font-bold text-4xl text-heading dark:text-dark-heading mb-6">
+                ¿Listo para destacar en redes sociales?
+              </h2>
+              <p class="text-text dark:text-dark-text mb-8">
+                Descubre cómo podemos ayudarte a construir una presencia sólida en redes sociales y conectar con tu audiencia de manera efectiva.
+              </p>
+              <Button href="/contacto" variant="primary">
+                Solicita tu consulta gratuita
+              </Button>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-white dark:bg-dark-background-alt p-4 rounded-lg">
+                <img 
+                  src="/images/facebook-icon.svg" 
+                  alt="Facebook"
+                  class="w-12 h-12 mx-auto mb-2"
+                />
+              </div>
+              <div class="bg-white dark:bg-dark-background-alt p-4 rounded-lg">
+                <img 
+                  src="/images/instagram-icon.svg" 
+                  alt="Instagram"
+                  class="w-12 h-12 mx-auto mb-2"
+                />
+              </div>
+              <div class="bg-white dark:bg-dark-background-alt p-4 rounded-lg">
+                <img 
+                  src="/images/linkedin-icon.svg" 
+                  alt="LinkedIn"
+                  class="w-12 h-12 mx-auto mb-2"
+                />
+              </div>
+              <div class="bg-white dark:bg-dark-background-alt p-4 rounded-lg">
+                <img 
+                  src="/images/tiktok-icon.svg" 
+                  alt="TikTok"
+                  class="w-12 h-12 mx-auto mb-2"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20">
+      <div class="container mx-auto px-4">
+        <h2 class="font-signika font-bold text-4xl text-heading dark:text-dark-heading text-center mb-12">
+          Preguntas Frecuentes sobre Redes Sociales
+        </h2>
+        <div class="max-w-3xl mx-auto">
+          <FAQ items={faqs} />
+        </div>
+      </div>
+    </section>
+
+    <CallToAction text="Haz clic aquí y empieza a convertir seguidores en clientes" />
+  </main>
+</Layout>

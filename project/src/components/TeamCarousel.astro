@@ -1,0 +1,135 @@
+---
+interface TeamMember {
+  name: string;
+  position: string;
+  image: string;
+  description: string;
+}
+
+interface Props {
+  members: TeamMember[];
+}
+
+const { members } = Astro.props;
+---
+
+<div class="team-carousel relative">
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      {members.map(member => (
+        <div class="swiper-slide">
+          <div class="bg-white dark:bg-dark-background-alt rounded-lg overflow-hidden shadow-lg p-8 text-center">
+            <div class="relative w-48 h-48 mx-auto mb-6">
+              <img
+                src={member.image}
+                alt={member.name}
+                class="rounded-full object-cover w-full h-full"
+                width="192"
+                height="192"
+                loading="lazy"
+              />
+            </div>
+            <h3 class="font-signika font-bold text-2xl text-heading dark:text-dark-heading mb-2">
+              {member.name}
+            </h3>
+            <p class="text-primary dark:text-dark-primary font-medium mb-4">
+              {member.position}
+            </p>
+            <p class="text-text dark:text-dark-text">
+              {member.description}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+    
+    {/* Navigation Buttons */}
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    
+    {/* Pagination */}
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+
+<script>
+  import Swiper from 'swiper';
+  import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+  import 'swiper/css';
+  import 'swiper/css/navigation';
+  import 'swiper/css/pagination';
+
+  // Initialize Swiper
+  const swiper = new Swiper('.swiper', {
+    modules: [Navigation, Pagination, Autoplay],
+    slidesPerView: 1,
+    spaceBetween: 32,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  });
+</script>
+
+<style>
+  .swiper {
+    padding: 20px 40px 60px;
+  }
+
+  .swiper-slide {
+    height: auto;
+  }
+
+  :global(.swiper-button-next),
+  :global(.swiper-button-prev) {
+    color: #121212;
+  }
+
+  :global(.dark .swiper-button-next),
+  :global(.dark .swiper-button-prev) {
+    color: #FFFFFF;
+  }
+
+  :global(.swiper-pagination-bullet) {
+    width: 12px;
+    height: 12px;
+    background: #D1D5DB;
+    opacity: 1;
+  }
+
+  :global(.dark .swiper-pagination-bullet) {
+    background: #4B5563;
+  }
+
+  :global(.swiper-pagination-bullet-active) {
+    background: #121212;
+    transform: scale(1.2);
+  }
+
+  :global(.dark .swiper-pagination-bullet-active) {
+    background: #FFFFFF;
+  }
+
+  @media (max-width: 640px) {
+    .swiper {
+      padding: 20px 0 40px;
+    }
+  }
+</style>

@@ -1,0 +1,43 @@
+---
+interface Props {
+  items: {
+    question: string;
+    answer: string;
+  }[];
+}
+
+const { items } = Astro.props;
+---
+
+<div class="space-y-6">
+  {items.map((item, index) => (
+    <details class="group bg-white dark:bg-dark-background-alt rounded-lg shadow-lg overflow-hidden">
+      <summary class="flex items-center justify-between p-6 cursor-pointer">
+        <h3 class="font-signika font-semibold text-xl text-heading dark:text-dark-heading">
+          {item.question}
+        </h3>
+        <span class="relative flex-shrink-0 ml-4 w-4 h-4">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="absolute inset-0 w-4 h-4 transition duration-300 group-open:rotate-180"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </span>
+      </summary>
+      <div class="px-6 pb-6">
+        <p class="text-text dark:text-dark-text">{item.answer}</p>
+      </div>
+    </details>
+  ))}
+</div>
+
+<style>
+  details summary::-webkit-details-marker {
+    display: none;
+  }
+</style>

@@ -1,0 +1,152 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+import Icon from '../components/Icon.astro';
+import FAQ from '../components/FAQ.astro';
+import CallToAction from '../components/CallToAction.astro';
+
+const metaTitle = "Agencia Social Ads Terrassa 【Publicidad en Redes】▷ Expertos en Ads";
+const metaDescription = "Agencia Social Ads en Terrassa especializada en publicidad en redes sociales. Maximiza tu presencia en Meta, Instagram, LinkedIn y más.";
+
+const faqs = [
+  {
+    question: "¿Qué plataformas cubren los servicios de Social Ads?",
+    answer: "Trabajamos con Facebook Ads, Instagram Ads, Meta Ads y LinkedIn Ads. Adaptamos cada campaña a la red social que mejor conecte con tu audiencia."
+  },
+  {
+    question: "¿Cuál es el presupuesto mínimo para comenzar?",
+    answer: "El presupuesto depende de tus metas, pero diseñamos estrategias que se ajusten a lo que necesitas, optimizando cada euro para maximizar resultados."
+  },
+  {
+    question: "¿Por qué no debería hacer mis anuncios en redes sociales por mi cuenta?",
+    answer: "Las plataformas sociales cambian constantemente, y lo que funcionaba ayer puede no servir hoy. Nuestro equipo se ocupa de estar al día para que tú no tengas que preocuparte y para que tus anuncios lleguen a la gente adecuada sin malgastar presupuesto."
+  },
+  {
+    question: "¿Cuánto tiempo se tarda en ver resultados con Social Ads?",
+    answer: "Con la publicidad en redes sociales, puedes empezar a ver resultados en pocos días, aunque el verdadero rendimiento se maximiza con la optimización continua. Nos encargamos de ajustar y mejorar cada campaña para que cada semana te acerque más a tus objetivos."
+  }
+];
+---
+
+<Layout 
+  title="Social Ads Terrassa | Publicidad en Redes Sociales"
+  metaTitle={metaTitle}
+  metaDescription={metaDescription}
+>
+  <main>
+    <section class="py-20">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h1 class="font-signika font-extrabold text-5xl text-heading dark:text-dark-heading mb-6">
+              Agencia Social Ads Terrassa: Que tus anuncios sociales sean como un imán de clientes
+            </h1>
+            <p class="text-text dark:text-dark-text mb-8">
+              ¿Quieres que tus anuncios en redes sociales realmente atraigan? Ya sabes, nada de campañas que pasan desapercibidas. Hablamos de <strong>Meta Ads</strong>, <strong>Facebook Ads</strong>, <strong>Instagram Ads</strong>, <strong>LinkedIn Ads</strong>... En fin, de conectar con tu audiencia donde pasan su tiempo y captarlos en el momento justo.
+            </p>
+            <Button href="/contacto" variant="primary">
+              Empieza tu campaña en redes sociales
+            </Button>
+          </div>
+          <div>
+            <img 
+              src="/images/social-ads-specialist.svg" 
+              alt="Especialista en Social Ads"
+              class="w-full max-w-lg mx-auto"
+              width="512"
+              height="512"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-background-alt dark:bg-dark-background-alt">
+      <div class="container mx-auto px-4">
+        <h2 class="font-signika font-bold text-4xl text-heading dark:text-dark-heading text-center mb-12">
+          ¿Por qué necesitas una Agencia Social Ads?
+        </h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="text-center">
+            <Icon name="target" className="w-16 h-16 mx-auto mb-4" />
+            <h3 class="font-signika font-semibold text-2xl text-heading dark:text-dark-heading mb-4">Segmentación precisa</h3>
+            <p class="text-text dark:text-dark-text">Hacemos que tus anuncios se muestren a quien de verdad importa. No se trata de tener muchos seguidores, sino de atraer a los que tienen potencial de convertirse en clientes.</p>
+          </div>
+          <div class="text-center">
+            <Icon name="visibility" className="w-16 h-16 mx-auto mb-4" />
+            <h3 class="font-signika font-semibold text-2xl text-heading dark:text-dark-heading mb-4">Optimización continua</h3>
+            <p class="text-text dark:text-dark-text">Meta, Instagram, LinkedIn... Cada red social tiene su propio algoritmo y sus trucos. Nosotros sabemos cómo sacarles el máximo jugo para que tu inversión sea rentable.</p>
+          </div>
+          <div class="text-center">
+            <Icon name="chart" className="w-16 h-16 mx-auto mb-4" />
+            <h3 class="font-signika font-semibold text-2xl text-heading dark:text-dark-heading mb-4">ROI maximizado</h3>
+            <p class="text-text dark:text-dark-text">Probar suerte en redes sociales sin experiencia puede salirte caro. Nosotros conocemos los errores comunes y hacemos que tu presupuesto trabaje para ti desde el minuto uno.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-white dark:bg-dark-background">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto bg-[#F6F6F6] dark:bg-[#000] rounded-lg shadow-xl p-12">
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 class="font-signika font-bold text-4xl text-heading dark:text-dark-heading mb-6">
+                ¿Listo para potenciar tu presencia en redes sociales?
+              </h2>
+              <p class="text-text dark:text-dark-text mb-8">
+                Descubre cómo podemos ayudarte a alcanzar a tu audiencia ideal y maximizar tu retorno de inversión con campañas de Social Ads optimizadas.
+              </p>
+              <Button href="/contacto" variant="primary">
+                Solicita tu consulta gratuita
+              </Button>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-white dark:bg-dark-background-alt p-4 rounded-lg">
+                <img 
+                  src="/images/facebook-icon.svg" 
+                  alt="Facebook Ads"
+                  class="w-12 h-12 mx-auto mb-2"
+                />
+              </div>
+              <div class="bg-white dark:bg-dark-background-alt p-4 rounded-lg">
+                <img 
+                  src="/images/instagram-icon.svg" 
+                  alt="Instagram Ads"
+                  class="w-12 h-12 mx-auto mb-2"
+                />
+              </div>
+              <div class="bg-white dark:bg-dark-background-alt p-4 rounded-lg">
+                <img 
+                  src="/images/linkedin-icon.svg" 
+                  alt="LinkedIn Ads"
+                  class="w-12 h-12 mx-auto mb-2"
+                />
+              </div>
+              <div class="bg-white dark:bg-dark-background-alt p-4 rounded-lg">
+                <img 
+                  src="/images/growth-icon.svg" 
+                  alt="Crecimiento"
+                  class="w-12 h-12 mx-auto mb-2"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20">
+      <div class="container mx-auto px-4">
+        <h2 class="font-signika font-bold text-4xl text-heading dark:text-dark-heading text-center mb-12">
+          Preguntas Frecuentes sobre Social Ads
+        </h2>
+        <div class="max-w-3xl mx-auto">
+          <FAQ items={faqs} />
+        </div>
+      </div>
+    </section>
+
+    <CallToAction text="Haz clic aquí y comencemos a atraer clientes en redes sociales" />
+  </main>
+</Layout>

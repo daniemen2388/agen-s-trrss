@@ -1,0 +1,101 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TeamCarousel from '../components/TeamCarousel.astro';
+
+const metaTitle = "Quiénes Somos | SEO Terrassa | Nuestro Equipo";
+const metaDescription = "Conoce al equipo de SEO Terrassa. Profesionales expertos en marketing digital, SEO, diseño web y estrategias digitales.";
+
+const teamMembers = [
+  {
+    name: "Ana García",
+    position: "CEO & Estratega SEO",
+    image: "/images/team/ana.webp",
+    description: "Con más de 10 años de experiencia en marketing digital, Ana lidera nuestro equipo con una visión innovadora y un profundo conocimiento del SEO técnico. Su pasión por los datos y la analítica web nos ayuda a tomar decisiones basadas en resultados."
+  },
+  {
+    name: "Carlos Martínez",
+    position: "Director de Proyectos",
+    image: "/images/team/carlos.webp",
+    description: "Especialista en gestión de proyectos digitales, Carlos asegura que cada proyecto se entregue a tiempo y supere las expectativas. Su experiencia en desarrollo web y UX aporta una perspectiva única a nuestras soluciones."
+  },
+  {
+    name: "Laura Sánchez",
+    position: "Especialista en Contenidos",
+    image: "/images/team/laura.webp",
+    description: "Laura es nuestra experta en crear contenido que conecta con las audiencias y posiciona en buscadores. Su background en periodismo y SEO copywriting nos permite desarrollar estrategias de contenido efectivas."
+  },
+  {
+    name: "David Pérez",
+    position: "Experto en PPC",
+    image: "/images/team/david.webp",
+    description: "Como especialista en publicidad digital, David gestiona campañas de Google Ads y redes sociales que maximizan el ROI. Su enfoque analítico y creativo genera resultados excepcionales para nuestros clientes."
+  },
+  {
+    name: "Elena Torres",
+    position: "Diseñadora Web",
+    image: "/images/team/elena.webp",
+    description: "Elena combina creatividad y funcionalidad en cada diseño web. Su experiencia en UI/UX y las últimas tendencias en diseño nos permite crear sitios web que no solo se ven bien, sino que también convierten."
+  }
+];
+---
+
+<Layout
+  title="Quiénes Somos | SEO Terrassa"
+  metaTitle={metaTitle}
+  metaDescription={metaDescription}
+>
+  <main class="py-20">
+    <div class="container mx-auto px-4">
+      {/* Hero Section */}
+      <div class="max-w-4xl mx-auto text-center mb-16">
+        <h1 class="font-signika font-extrabold text-5xl text-heading dark:text-dark-heading mb-6">
+          Conoce a Nuestro Equipo
+        </h1>
+        <p class="text-lg text-text dark:text-dark-text mb-8">
+          En SEO Terrassa, somos un equipo de profesionales apasionados por el marketing digital y comprometidos con el éxito de nuestros clientes. Nuestra experiencia combinada nos permite ofrecer soluciones integrales que generan resultados reales.
+        </p>
+      </div>
+
+      {/* Team Carousel */}
+      <div class="mb-20">
+        <TeamCarousel members={teamMembers} />
+      </div>
+
+      {/* Values Section */}
+      <div class="max-w-4xl mx-auto">
+        <h2 class="font-signika font-bold text-3xl text-heading dark:text-dark-heading text-center mb-12">
+          Nuestros Valores
+        </h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="text-center">
+            <div class="bg-primary dark:bg-dark-primary text-white dark:text-dark-background w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="font-signika font-semibold text-xl text-heading dark:text-dark-heading mb-4">Excelencia</h3>
+            <p class="text-text dark:text-dark-text">Nos esforzamos por superar las expectativas en cada proyecto, manteniendo los más altos estándares de calidad.</p>
+          </div>
+          <div class="text-center">
+            <div class="bg-primary dark:bg-dark-primary text-white dark:text-dark-background w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+            </div>
+            <h3 class="font-signika font-semibold text-xl text-heading dark:text-dark-heading mb-4">Trabajo en Equipo</h3>
+            <p class="text-text dark:text-dark-text">Colaboramos estrechamente entre nosotros y con nuestros clientes para alcanzar objetivos comunes.</p>
+          </div>
+          <div class="text-center">
+            <div class="bg-primary dark:bg-dark-primary text-white dark:text-dark-background w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+              </svg>
+            </div>
+            <h3 class="font-signika font-semibold text-xl text-heading dark:text-dark-heading mb-4">Innovación</h3>
+            <p class="text-text dark:text-dark-text">Nos mantenemos al día con las últimas tendencias y tecnologías para ofrecer soluciones innovadoras.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>

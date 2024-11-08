@@ -1,0 +1,162 @@
+---
+import ThemeToggle from '../components/ThemeToggle.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  metaTitle?: string;
+  metaDescription?: string;
+}
+
+const { 
+  title, 
+  description = "Agencia SEO en Terrassa especializada en posicionamiento web y marketing digital",
+  metaTitle = title,
+  metaDescription = description
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={metaDescription} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@600;700;800&family=Heebo:wght@400;500;600&display=swap" rel="stylesheet">
+    <meta name="generator" content={Astro.generator} />
+    <title>{metaTitle}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script is:inline>
+      const theme = (() => {
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+          return localStorage.getItem('theme');
+        }
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          return 'dark';
+        }
+        return 'light';
+      })();
+    
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+      }
+    </script>
+  </head>
+  <body class="bg-background dark:bg-dark-background text-text dark:text-dark-text transition-colors duration-300">
+    <header class="bg-background dark:bg-dark-nav shadow-sm">
+      <nav class="container mx-auto px-4 py-6">
+        <div class="flex justify-between items-center">
+          <a href="/" class="font-signika font-bold text-2xl text-primary dark:text-dark-primary">SEO Terrassa</a>
+          <div class="flex items-center space-x-8">
+            <div class="hidden md:flex space-x-8">
+              <a href="/google-ads" class="font-heebo font-medium text-primary dark:text-dark-primary hover:text-gray-600 dark:hover:text-gray-300">Google Ads</a>
+              <a href="/social-ads" class="font-heebo font-medium text-primary dark:text-dark-primary hover:text-gray-600 dark:hover:text-gray-300">Social Ads</a>
+              <a href="/redes-sociales" class="font-heebo font-medium text-primary dark:text-dark-primary hover:text-gray-600 dark:hover:text-gray-300">Redes Sociales</a>
+              <a href="/analitica" class="font-heebo font-medium text-primary dark:text-dark-primary hover:text-gray-600 dark:hover:text-gray-300">Analítica</a>
+              <a href="/diseno-web" class="font-heebo font-medium text-primary dark:text-dark-primary hover:text-gray-600 dark:hover:text-gray-300">Diseño Web</a>
+              <a href="/quienes-somos" class="font-heebo font-medium text-primary dark:text-dark-primary hover:text-gray-600 dark:hover:text-gray-300">Quiénes Somos</a>
+            </div>
+            <div class="flex items-center space-x-4">
+              <ThemeToggle />
+              <a 
+                href="/contacto" 
+                class="font-heebo font-medium px-4 py-2 rounded-lg bg-primary text-white dark:bg-dark-primary dark:text-dark-background hover:bg-opacity-90 transition-colors duration-200"
+              >
+                Contacto
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <slot />
+    <footer class="bg-[#F6F6F6] text-primary dark:bg-dark-nav dark:text-dark-primary py-12 mt-20">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-8">
+          {/* Contact Info */}
+          <div>
+            <h3 class="font-signika font-semibold text-xl mb-4">Contacto</h3>
+            <ul class="space-y-2">
+              <li class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                </svg>
+                <a href="mailto:info@seoterassa.com">info@seoterassa.com</a>
+              </li>
+              <li class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                </svg>
+                <a href="tel:+34937888888">937 88 88 88</a>
+              </li>
+              <li class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                </svg>
+                <address class="not-italic">
+                  Carrer de la Font Vella, 78<br/>
+                  08221 Terrassa, Barcelona
+                </address>
+              </li>
+            </ul>
+          </div>
+
+          {/* Legal Links */}
+          <div>
+            <h3 class="font-signika font-semibold text-xl mb-4">Legal</h3>
+            <ul class="space-y-2">
+              <li><a href="/aviso-legal" class="hover:underline">Aviso legal</a></li>
+              <li><a href="/politica-privacidad" class="hover:underline">Política de privacidad</a></li>
+              <li><a href="/politica-cookies" class="hover:underline">Política de cookies</a></li>
+              <li><a href="/kit-digital" class="hover:underline">Programa Kit Digital</a></li>
+            </ul>
+          </div>
+
+          {/* Social Media */}
+          <div>
+            <h3 class="font-signika font-semibold text-xl mb-4">Síguenos</h3>
+            <div class="flex space-x-4">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="hover:text-gray-300 transition-colors">
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                </svg>
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="hover:text-gray-300 transition-colors">
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M16 4H8C5.79086 4 4 5.79086 4 8V16C4 18.2091 5.79086 20 8 20H16C18.2091 20 20 18.2091 20 16V8C20 5.79086 18.2091 4 16 4Z"></path>
+                  <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z"></path>
+                  <circle cx="16" cy="8" r="1.5"></circle>
+                </svg>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="hover:text-gray-300 transition-colors">
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          {/* Copyright */}
+          <div>
+            <h3 class="font-signika font-semibold text-xl mb-4">Horario</h3>
+            <p class="mb-4">
+              Lunes a Viernes<br/>
+              9:00 - 14:00<br/>
+              16:00 - 19:00
+            </p>
+            <p class="text-sm mt-8">&copy; {new Date().getFullYear()} SEO Terrassa.<br/>Todos los derechos reservados.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
